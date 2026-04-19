@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stringcase-lite"
+version = "0.1.0"
+description = "Convert between common string case conventions."
+authors = [{name = "Nripanka Das", email = "nripankadas@gmail.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.10"
+keywords = ["string", "case", "conversion", "snake_case", "camelCase", "PascalCase"]
+classifiers = ["License :: OSI Approved :: MIT License", "Programming Language :: Python :: 3"]
+
+[tool.setuptools.packages]
+find = {}
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
