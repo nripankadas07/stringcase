@@ -23,7 +23,12 @@ def _insert_markers(text: str) -> str:
                 result.append("|")
             elif prev_ch.isdigit() and ch.isalpha():
                 result.append("|")
-            elif (i + 1 < len(text) and ch.isupper() and text[i + 1].islower() and prev_ch.isupper()):
+            elif (
+                i + 1 < len(text)
+                and ch.isupper()
+                and text[i + 1].islower()
+                and prev_ch.isupper()
+            ):
                 result.append("|")
                 result.append(ch)
                 continue
